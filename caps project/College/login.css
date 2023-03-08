@@ -52,7 +52,16 @@ body {
     font-size: 14px;
     margin-bottom: 10px;
   }
-  #lik a{
-    color: red;
+   #lik a{
+    color: rgb(24, 37, 177);
     padding-left: 10px;
+    text-decoration: none;
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 7px;
+    margin: 10px;
+  }
+  #lik a:hover{
+  background-color:  #e9cb23;
+  color: #0c0c0c;
   }
