@@ -1,3 +1,12 @@
+const navbar = document.querySelector('.links nav');
+
+window.addEventListener('scroll', () => {
+  if (window.pageYOffset >= navbar.offsetTop) {
+    navbar.classList.add('sticky');
+  } else {
+    navbar.classList.remove('sticky');
+  }
+});
 let valueDisplays = document.querySelectorAll(".num");
 let interval = 4000;
 
