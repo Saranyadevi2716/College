@@ -515,7 +515,7 @@ font-size:20px;
 margin-left: 30px;
 }
 .header2 h1{
-  color: rgb(5, 161, 185);
+  color: rgb(209, 171, 34);
 }
 .division{
   height: 650px;
@@ -692,6 +692,9 @@ display: inline-block;
 
 
 }
+.frm label{
+  color: #2a1919;
+}
 
 .divin ul li a {
   color: #fff;
@@ -714,7 +717,7 @@ display: inline-block;
   width: 180px;
   padding: 13px;
   color: white;
-  background-color: rgba(124, 203, 227, 0.8);
+  background-color: rgba(118, 81, 81, 0.8);
   border: none;
   border-radius: 10px;
   margin-left: 35px;
