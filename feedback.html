@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>feedback</title>
+    <link rel="stylesheet" href="feedback.css">
+</head>
+<body>
+    <section class="sect" >
+        <nav>
+            <ul>
+              <li><a href="nav.html" class="lin">HOME</a></li>
+              <li><a href="#" class="lin">ABOUT US</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropbtn lin">COURSES OFFERED</a>
+                <div class="dropdown-content">
+                  <!-- <a href="#">ONLINE COURSES</a> -->
+                  <a href="#">VALUE ADDED COURSE</a>
+                  <a href="#">COMPANY SPECIFIC COURSES</a>
+                  <!-- <a href="#">ROSC/APRA</a>
+                  <a href="#">ECDIS/GMDSS</a> -->
+                </div>
+              </li>
+              <li><a href="#" class="lin">INFRASTRUCTURE</a></li>
+              <li><a href="" class="lin">PLACEMENT</a></li>
+              <li><a href="" class="lin">STUDENTS CORNER</a></li>
+      
+            </ul>
+          </nav>
+          <div class="hect">
+          <h1>FEEDBACK</h1>
+        </div>
+    </section>
+    <div class="container">
+        <form id="feedback-form">
+          <h2 style="margin-bottom: 20px;">Feedback Form</h2>
+      
+          <div class="group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" class="form-control" required>
+          </div>
+      
+          <div class="group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" class="form-control" required>
+          </div>
+      
+          <div class="group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" class="form-control" required>
+          </div>
+      
+          <div class="group">
+            <label>Gender:</label>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="male" name="gender" value="male" required>
+              <label class="form-check-label" for="male">Male</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="female" name="gender" value="female" required>
+              <label class="form-check-label" for="female">Female</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="other" name="gender" value="other" required>
+              <label class="form-check-label" for="other">Other</label>
+            </div>
+          </div>
+      
+          <div class="group">
+            <label for="mode">Mode:</label>
+            <select id="mode" name="mode" class="form-control" required >
+              <option value="">Select</option>
+              <option value="online">Online</option>
+              <option value="offline">Offline</option>
+            </select>
+          </div>
+      
+          <div class="group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" class="form-control" required></textarea>
+          </div>
+      
+          <button type="submit" id="submit-button" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+      
+      
+</body>
+</html>

@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #281c1c;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+nav a {
+    position: relative;
+    text-decoration: none;
+    color: #333;
+  }
+
+  nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: orange;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-out;
+  }
+  nav a:hover::after {
+    transform: scaleX(1);
+    transition-delay: 0.1s;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  /* Dropdown Button */
+.dropdown .dropbtn {
+  color: rgb(255, 255, 255);
+  padding: 14px, 16px;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+  
+  background-color: rgba(242, 218, 218, 0.7);
+}
+
+.dropdown:hover .dropbtn, .dropdown:focus .dropbtn {
+    background-color: rgba(79, 68, 69, 0.7);
+}
+
+.dropdown-content {
+  display: none;
+  background: transparent;
+  width: 400px;
+  position: absolute;
+  margin-top: 20px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: rgb(255, 255, 255);
+  padding: 40px;
+  text-decoration: none;
+  margin-top: 10px;
+  display: block;
+  font-size: 14px;
+}
+/* .linkses{
+  display: flex;
+}
+#kin{
+  height: 200px;
+  width: 600px;
+  background-color: transparent;
+   position: absolute;
+   border-radius: 0%;
+   top: 150px;
+   left: 80px;
+}
+#ked{
+  position: absolute;
+  border-radius: 2%;
+  background-color: transparent;
+  background-color: rgba(4, 57, 76, 0.7);
+  height: 200px;
+  width: 600px;
+  top: 150px;
+  left: 580px;
+  border-radius: 30px;
+
+  margin: 0;
+} */
+
+
+.dropdown-content a:hover {
+  background-color: rgba(79, 68, 69, 0.7);
+
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+  .sect nav {
+    position: absolute;
+    right: 0%;   
+    top: 10%;
+    z-index: 2;
+    
+  }
+  /* .sticky{
+    background-color: rgb(23, 114, 126);
+    padding-top: 40px;
+    height: 50px;
+    margin-left: 0%;
+    margin-right: 0%;
+    width: 100%;
+    
+  } */
+
+  .sect nav ul {
+    list-style: none;
+    display: flex;
+    /* margin-left: 500px; */
+    margin-bottom: 50px;
+   
+    /* position: absolute;
+    top: 30px;
+    right: 20px; */
+  }
+
+  .sect nav ul li {
+    margin: 0 16px;
+  }
+   .sect h1{
+    padding-top: 100px;
+    padding-bottom: 20px;
+   }
+   .sect p{
+    font-size: 30px;
+   }
+  .sect nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px;
+   
+    border-radius: 10px;
+    background-color: rgba(242, 218, 218, 0.7);
+    transition: background-color 0.3s ease;
+  }
+
+  .sect nav ul li a:hover {
+    background-color: rgba(79, 68, 69, 0.7);
+  }
+  .sect{
+    height: 200px;
+  }
+  div.scrollmenu {
+    background-color: #333;
+    overflow: auto;
+    white-space: nowrap;
+  }
+  
+  div.scrollmenu a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+  }
+  
+  div.scrollmenu a:hover {
+    background-color: #383b77;
+  }
+  .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+  .container22 {
+    position: relative;
+    max-width: 800px; 
+    margin: 0 auto; 
+  }
+  
+
+  .marquee {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .marquee ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    animation: marquee 30s linear infinite;
+  }
+  
+  .marquee li {
+    display: inline-block;
+    margin-right: 100px;
+  }
+  
+  .marquee li:last-child {
+    margin-right: 0;
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  
+* {
+  box-sizing: border-box;
+}
+
+
+.container22 {
+  padding: 16px;
+  background-color: white;
+}
+
+
+a {
+  color: dodgerblue;
+}
+
+.flip-box {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateX(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-box-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateX(180deg);
+}
+
+
+
+.wrapper {
+  position: absolute;
+  width: 80vw;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+.container2 {
+  width: 20vmin;
+  height: 20vmin;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1em 0;
+  position: relative;
+  font-size: 16px;
+  border-radius: 0.5em;
+  background-color: #e0c3c3;
+  border-bottom: 10px solid #4a2424;
+}
+i {
+  color: #411314;
+  font-size: 2.5em;
+  text-align: center;
+}
+span.num {
+  color: #351515;
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+  font-size: 3em;
+}
+span.text {
+  color: #3f1717;
+  font-size: 1em;
+  text-align: center;
+  pad: 0.7em 0;
+  font-weight: 400;
+  line-height: 0;
+}
+@media screen and (max-width: 720px) {
+  .wrapper {
+    width: 85vw;
+  }
+  .container2 {
+    height: 26vmin;
+    width: 26vmin;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .wrapper {
+    width: 90vw;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .container2 {
+    width: calc(50% - 40px);
+    height: 30vmin;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .wrapper {
+    gap: 15px;
+  }
+  .container2 {
+    width: 100%;
+    height: 25vmin;
+    font-size: 8px;
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.wrapper {
+  position: relative;
+  margin-top: 10%;
+  width: 80vw;
+  transform: translate(-50%, -50%);
+  top: 150%;
+  left: 50%;
+  
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+.container22 {
+  width: 20vmin;
+  height: 20vmin;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1em 0;
+  position: relative;
+  font-size: 16px;
+  border-radius: 0.5em;
+  background-color: #c9c9c9;
+  border-bottom: 10px solid #2d1313;
+}
+i {
+  color: #4e1f1f;
+  font-size: 2.5em;
+  text-align: center;
+}
+span.num {
+  color: #4b1e1e;
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+  font-size: 3em;
+}
+span.text {
+  color: #492121;
+  font-size: 1em;
+  text-align: center;
+  pad: 0.7em 0;
+  font-weight: 400;
+  line-height: 0;
+}
+@media screen and (max-width: 720px) {
+  .wrapper {
+    width: 85vw;
+  }
+  .container222 {
+    height: 26vmin;
+    width: 26vmin;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .wrapper {
+    width: 90vw;
+    gap: 30px;
+  }
+  .container2 {
+    width: calc(50% - 40px);
+    height: 30vmin;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .wrapper {
+    gap: 15px;
+  }
+  .container2 {
+    width: 100%;
+    height: 25vmin;
+    font-size: 8px;
+  }
+}
+.footerr {
+  /* background:linear-gradient(rgb(80, 66, 70),rgba(177, 174, 174, 0.7)), url(images/468967.jpg); */
+  background-color: rgb(105, 101, 101);
+  margin-top: 30px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  width: 100%;
+  padding: 20px 0;
+  /* text-align: center; */
+  position: absolute;
+  top: 1950px;
+  height: 300px;
+  }
+  
+  .divin {
+  display: inline-block;
+  margin: 0 20px;
+  vertical-align: top;
+  }
+  
+  .divin h6 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #f9f7f2;
+  margin-left: 30px;
+  
+  }
+  #foot{
+    position:absolute;
+    right: 10%;
+    bottom:0px;
+  }
+  .divin ul {
+  
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  }
+  
+  .divin li {
+  margin: 10px 0;
+  line-height: 40px;
+  }
+  .divin ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    }
+    
+    .divin ul li a:hover {
+    color: rgb(255, 191, 0);
+    }
+.footerr {
+  /* background:linear-gradient(rgb(80, 66, 70),rgba(177, 174, 174, 0.7)), url(images/468967.jpg); */
+  background-color: rgb(53, 35, 35);
+  margin-top: 30px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  width: 100%;
+  padding: 20px 0;
+  /* text-align: center; */
+  position: absolute;
+  top: 3750px;
+  height: 300px;
+  }
+  
+  .divin {
+  display: inline-block;
+  margin: 0 20px;
+  vertical-align: top;
+  }
+  
+  .divin h6 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: goldenrod;
+  margin-left: 30px;
+  
+  }
+  
+  .divin ul {
+  
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  }
+  
+  .divin li {
+  margin: 10px 0;
+  line-height: 40px;
+  }
+  .divin ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    }
+    
+    .divin ul li a:hover {
+    color: rgb(255, 191, 0);
+    }
+</style>
+</head>
+<body>
+
+<div class="about-section">
+<div class="sect">
+    <nav>
+        <ul>
+          <li><a href="firstpage.html" class="lin">HOME</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn lin">COURSES OFFERED</a>
+            <div class="dropdown-content">
+              <!-- <a href="#">ONLINE COURSES</a> -->
+              <a href="#">VALUE ADDED COURSE</a>
+              <a href="#">COMPANY SPECIFIC COURSES</a>
+              <!-- <a href="#">ROSC/APRA</a>
+              <a href="#">ECDIS/GMDSS</a> -->
+            </div>
+          </li>
+          <li><a href="#" class="lin">INFRASTRUCTURE</a></li>
+          <li><a href="" class="lin">PLACEMENT</a></li>
+          <li><a href="" class="lin">STUDENTS CORNER</a></li>
+          <li><a href="" class="lin">FEEDBACK</a></li>
+        </ul>
+      </nav>
+  <h1>ABOUT US</h1>
+  <p>TITANIC MARITIME COLLEGE</p>
+</div>
+
+</div> <br><br>
+
+<h1 style="text-align:center">OUR HEADS</h2> <br><br>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="pic/pexels-ono-kosuki-5648408.jpg" alt="Jane" style="width:100%">
+      <div class="container">
+        <h2>Jack Franklin</h2><br>
+        <p class="title">Founder</p><br>
+        <p></p><br>
+        <p>jake@gmail.com</p><br>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="pic/pexels-august-de-richelieu-4427425.jpg" alt="Mike" style="width:100%">
+      <div class="container">
+        <h2>Rosslin Frankler</h2><br>
+        <p class="title"> Director</p> <br>
+        <p></p><br>
+        <p>frankler@gmail.com</p> <br>
+        <!-- <p><button class="button">Contact</button></p> -->
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="pic/pexels-katerina-holmes-5905902.jpg" alt="John" style="width:100%">
+      <div class="container">
+        <h2>Katrina</h2><br>
+        <p class="title">Codirector</p><br>
+        <p></p><br>
+        <p>katrina@gmail.com</p> <br>
+      </div>
+    </div>
+  </div>
+</div>
+<h1 style="text-align:center">OUR SPONSORS</h2> <br><br>
+
+    <div class="row">
+      <div class="column">
+        <div class="card">
+          <img src="pic/pexels-cottonbro-studio-5971253.jpg" alt="Jane" style="width:100%">
+          <div class="container">
+            <h2>ALANER</h2><br>
+            <p class="title">SPONSOR</p><br>
+            <p>GMDSS SIMULATOR</p><br>
+            <p>jake@gmail.com</p><br>
+          </div>
+        </div>
+      </div>
+    
+      <div class="column">
+        <div class="card">
+          <img src="pic/pexels-tima-miroshnichenko-5717632.jpg" alt="Mike" style="width:100%">
+          <div class="container">
+            <h2>Amelia Roosevelt</h2><br>
+            <p class="title">SPONSOR</p> <br>
+            <p>ECDIS SIMULATOR</p><br>
+            <p>frankler@gmail.com</p> <br>
+            <!-- <p><button class="button">Contact</button></p> -->
+          </div>
+        </div>
+      </div>
+      
+      <div class="column">
+        <div class="card">
+          <img src="pic/pexels-tima-miroshnichenko-5439472.jpg" alt="John" style="width:100%">
+          <div class="container">
+            <h2>Kane Zooren</h2><br>
+            <p class="title">SPONSOR</p><br>
+            <p>BTM SIMULATOR 1</p><br>
+            <p>kane@gmail.com</p> <br>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h1 style="text-align:center">PLACEMENT</h2> <br><br>
+      <p>We are committed to helping our students succeed in their careers by providing them with the necessary resources and guidance to land their dream jobs.</p><br><br>
+      <br><br><br>
+            <section id="Placement process">
+              <center>  <h2>Placement process</h2><br><br>
+              
+                <img src="pic/IMG-20230323-WA0004.jpg" alt="placement" width="1000" height="300"> <br><br>
+               
+              
+            </section></center><br><br><br>
+      <section id="placement tracking"> <center><b>PLACEMENT TRACKING</b></center><br>
+        <center>  <img src="pic/IMG-20230323-WA0006.jpg"width="1000" height="300"></center>
+        <div class="wrapper">
+          <div class="container2">
+            <i class="fas fa-ship"></i>
+            <span class="num" data-val="400">000</span>
+            <span class="text">Company visited</span>
+          </div>
+      
+          <div class="container2">
+            <i class="fas fa-smile"></i>
+            <span class="num" data-val="340">000</span>
+            <span class="text">Students</span>
+          </div>
+      
+          <div class="container2">
+            <i class="fas fa-book"></i>
+            <span class="num" data-val="225">000</span>
+            <span class="text">Offers</span>
+          </div>
+      
+          <div class="container2">
+            <i class="fas fa-list"></i>
+            <span class="num" data-val="280">000</span>
+            <span class="text">No of boarded</span>
+          </div>
+        </div>
+      
+        <script src="NM.js"></script>
+        
+      </section>
+      
+            <section id="companies">
+              <center>   <h2>Our Top Recruiters</h2>
+                <div class="marquee">
+                  <ul>
+                    <li><img src="pic/IMG-20230323-WA0009.jpg"alt="company 1"></li>
+                    <li><img src="pic/IMG-20230323-WA0008.jpg"  alt="company 2 "></li>
+                   
+                    <li><img src="pic/IMG-20230323-WA0005.jpg" alt="company 3"></li>
+                    <li><img src="pic/IMG-20230323-WA0007.jpg" alt="company 4"></li>
+                    
+                  </ul>
+                </div>
+            </section></center>
+            <footer class="footerr">
+              <div class="divin">
+                <h6 style="letter-spacing:3px">CLICK FOR</h6>
+                <ul>
+                  <li><a href="#">COURSES OFFERED</a></li>
+                  <li><a href="#">FEES STRUCTURE</a></li>
+                  <li><a href="#">SPECIFICATIONS</a></li>
+                  <li><a href="#">INFRASTRUCTURE</a></li>
+                  <li><a href="#">HELP LINE</a></li>
+                </ul>
+              </div>
+              <div class="divin">
+                <h6 style="letter-spacing:3px">FAQ</h6>
+                <ul>
+                  <li><a href="#">TERMS AND CONDITIONS</a></li>
+                  <li><a href="#">CONTACT US</a></li>
+                  <li><a href="#">APPLYING DETAILS</a></li>
+                  <li><a href="#">RULES AND REGULATIONS</a></li>
+                  <li><a href="#">APPLICATION</a></li>
+                </ul>
+              </div>
+              <div class="divin">
+                <h6 style="letter-spacing:3px">PHONE NUMBER</h6>
+                <ul>
+                  <li><a href="#">91-44-0898588</a></li>
+                  <li><a href="#">91-44-0898588</a></li>
+                  <li><a href="#">91-44-0898588</a></li>
+                </ul>
+              </div>
+              <div class="divin">
+                <h6 style="letter-spacing:3px">FOLLOW US ON</h6>
+                <ul>
+                  <li><a href="#">facebook</a></li>
+                  <li><a href="#">instagram</a></li>
+                  <li><a href="#">youtube</a></li>
+                  <li><a href="#">twitter</a></li>
+                </ul>
+               <div class="divin" id="foot">
+                <ul> <li>
+                <!-- <h6 style="letter-spacing:3px" >LOCATE US:</a></h6></li> -->
+                <li > <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3020.9570756332078!2d-73.85015496865759!3d40.78495781319197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2f54d9243ea5f%3A0xb75afd12626a4e84!2sCollege%20Point!5e0!3m2!1sen!2sin!4v1678117307359!5m2!1sen!2sin" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </li>
+                </ul>
+               </div>
+              </div>
+            </footer>
+
+ <script src="try.js"></script>
+</body>
+</html>

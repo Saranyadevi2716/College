@@ -1,0 +1,253 @@
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgb(77, 57, 57);
+    margin-bottom: 20px;
+    
+  }
+ 
+  h2 {
+    margin-top: 0;
+    color: #fffbfb;
+  }
+  
+  .group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    color: #fff;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"], input[type="email"], textarea {
+    padding: 10px;
+    color:maroon;
+    background-color:rgb(240, 228, 228,0.7);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 500px;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  #phone{
+    padding: 10px;
+    color:maroon;
+    background-color:rgb(240, 228, 228,0.7);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    font-size: 16px;
+    margin-bottom: 10px;
+
+  }
+  #mode{
+    padding: 10px;
+    color:rgb(56, 11, 11);
+    background-color:rgb(240, 228, 228,0.7);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    font-size: 16px;
+    margin-bottom: 10px;
+
+
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #926d6d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #ced1d5;
+    color: maroon;
+  }
+  nav a {
+    position: relative;
+    text-decoration: none;
+    color: #333;
+  }
+
+  nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: orange;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-out;
+  }
+  
+  nav a:hover::after {
+    transform: scaleX(1);
+    transition-delay: 0.1s;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  /* Dropdown Button */
+.dropdown .dropbtn {
+  color: rgb(255, 255, 255);
+  padding: 14px, 16px;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+  
+  background-color: rgba(34, 12, 16, 0.7);
+}
+
+.dropdown:hover .dropbtn, .dropdown:focus .dropbtn {
+    background-color: rgba(220, 211, 212, 0.7);
+}
+
+.dropdown-content {
+  display: none;
+  background: transparent;
+  width: 400px;
+  position: absolute;
+  margin-top: 20px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: rgb(255, 255, 255);
+  padding: 40px;
+  text-decoration: none;
+  margin-top: 10px;
+  display: block;
+  font-size: 14px;
+}
+/* .linkses{
+  display: flex;
+}
+#kin{
+  height: 200px;
+  width: 600px;
+  background-color: transparent;
+   position: absolute;
+   border-radius: 0%;
+   top: 150px;
+   left: 80px;
+}
+#ked{
+  position: absolute;
+  border-radius: 2%;
+  background-color: transparent;
+  background-color: rgba(4, 57, 76, 0.7);
+  height: 200px;
+  width: 600px;
+  top: 150px;
+  left: 580px;
+  border-radius: 30px;
+
+  margin: 0;
+} */
+
+
+.dropdown-content a:hover {
+    background-color: rgba(108, 94, 97, 0.7);
+
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+  .sect nav {
+    position: absolute;
+    right: 0%;   
+    top: 10%;
+    z-index: 2;
+    
+  }
+  /* .sticky{
+    background-color: rgb(23, 114, 126);
+    padding-top: 40px;
+    height: 50px;
+    margin-left: 0%;
+    margin-right: 0%;
+    width: 100%;
+    
+  } */
+
+  .sect nav ul {
+    list-style: none;
+    display: flex;
+    /* margin-left: 500px; */
+    margin-bottom: 50px;
+   
+    /* position: absolute;
+    top: 30px;
+    right: 20px; */
+  }
+
+  .sect nav ul li {
+    margin: 0 16px;
+  }
+
+  .sect nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px;
+   
+    border-radius: 10px;
+    background-color: rgba(34, 12, 16, 0.7);
+    transition: background-color 0.3s ease;
+  }
+
+  .sect nav ul li a:hover {
+    background-color: rgba(126, 88, 91, 0.7);
+  }
+  .sect{
+    /* background:linear-gradient(rgb(217, 206, 206,0.5),rgba(52, 50, 50, 0.4)), url(pic/); */
+    background: url(pic/pexels-ann-h-6935081\ \(1\).jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 600px;
+    margin-bottom: 50px;
+  }
+  .sect .hect{
+    height: 200px;
+    width: 500px;
+    /* background-color: rgba(63, 50, 50, 0.7); */
+    border-radius: 20px;
+    position: absolute;
+    top: 190px;
+   }
+   .sect h1{
+    color: rgb(55, 30, 30);
+    padding: 20px;
+    padding-top: 60px;
+    text-align: center;
+    font-size: 80px;
+    letter-spacing: 20px;
+    top: 0px;
+    position:absolute;
+    left:500px
+ 
+   }

@@ -1,0 +1,70 @@
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    background:linear-gradient(rgba(228, 238, 242, 0.7),rgba(29, 29, 31, 0.7)), url(pic/pexels-karolina-grabowska-4497761.jpg);
+        
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #login-form {
+    width: 900px;
+    color: white;
+    margin: 0 auto;
+    background-color: rgba(57, 57, 62, 0.7);
+        border-radius: 25px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: absolute;
+    top: 160px;
+    left: 300px;
+  }
+  #heade{
+    text-align: center;
+  }
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  input[type="text"],
+  input[type="password"] {
+    width: 500px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    background-color: rgb(193, 192, 191);
+  }
+  input[type="submit"] {
+    background-color: #e9cb23;
+    color: #1d1313;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  input[type="submit"]:hover {
+    background-color: #6f5c5c;
+    color: white;
+  }
+  .error-message {
+    color: #ff0000;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  #lik a{
+    color: rgb(59, 37, 40);
+    padding-left: 10px;
+    text-decoration: none;
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 7px;
+    font-size: 15px;
+    margin: 10px;
+  }
+  #lik a:hover{
+  background-color:  #8a7375;
+  color: #ede5e5;
+  }

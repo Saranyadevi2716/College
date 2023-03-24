@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Notification Example</title>
+	<style>
+		.notification {
+			top: 600px;
+			padding: 10px;
+			background-color: #4CAF50;
+			color: #fff;
+            height: 500px;
+            margin: 50px;
+			border-radius: 4px;
+			animation: slide-up 0.5s ease;
+			z-index: 999;
+		}
+		@keyframes slide-up {
+			from { bottom: -50px; opacity: 0; }
+			to { bottom: 20px; opacity: 1; }
+		}
+	</style>
+</head>
+<body>
+	<h1>Notification Example</h1>
+	<button onclick="showNotification()">Show Notification</button>
+
+	<div class="notification" id="notification" style="display:none">
+		<p>This is a notification</p>
+		<button onclick="hideNotification()">OK</button>
+	</div>
+
+	<script>
+		function showNotification() {
+			document.getElementById("notification").style.display = "block";
+		}
+
+		function hideNotification() {
+			document.getElementById("notification").style.display = "none";
+		}
+	</script>
+</body>
+</html>

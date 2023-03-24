@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>log in</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div id="login-form">
+        <h1 id="heade">Login For Access to Courses</h1>
+        <form action="app.html">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required>
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required> <br>
+          <input type="submit" value="Login">
+          <div id="error-message" class="error-message"></div>
+        </form>
+         <h3 id="lik">NEW USER?<a href="signup.html">SIGN UP</a></h3>
+
+      </div>
+      <script>
+        const form = document.querySelector('form');
+        const errorMessage = document.querySelector('#error-message');
+  
+        form.addEventListener('submit', (event) => {
+          event.preventDefault();
+          const username = document.querySelector('#username').value;
+          const password = document.querySelector('#password').value;
+          if (username === 'fathima' && password === '1234') {
+            window.location.href = 'payment.html'; 
+          } else {
+            errorMessage.innerHTML = 'Invalid username or password';
+          }
+        });
+      </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Signup Page</title>
+     <link rel="stylesheet" href="signup.css">
+  </head>
+  <body>
+    <div id="signup-form">
+      <h1>Sign Up</h1>
+      <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required> <br>
+        <input type="submit" value="Sign Up">
+        <div id="error-message" class="error-message"></div>
+      </form>
+      <h3 id="lik">NEW USER?<a href="app.html">LOG IN</a></h3>
+      <h4 style="text-decoration: none;" id="bk"><a href="onc.html">GO BACK</a></h3>
+
+    </div>
+    <script>
+      const form = document.querySelector('form');
+      const errorMessage = document.querySelector('#error-message');
+
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const name = document.querySelector('#name').value;
+        const email = document.querySelector('#email').value;
+        const password = document.querySelector('#password').value;
+        if (name === '' || email === '' || password === '') {
+          errorMessage.innerHTML = 'Please fill in all fields';
+        } else {
+        
+          localStorage.setItem('name', name);
+          localStorage.setItem('email', email);
+          localStorage.setItem('password', password);
+          window.location.href = 'dashboard.html'; 
+        }
+      });
+    </script>
+  </body>
+</html>
